@@ -9,10 +9,10 @@ import { Player } from './models/player';
 export class PlayerService {
   constructor(  private http: HttpClient) { }
 
-  private url = 'http://localhost:3000/player'
+  private url = 'https://players-app-4ibl.onrender.com/player'
 
   obtenerPlayers(): Observable<any>{
-    return this.http.get("http://localhost:3000/player")
+    return this.http.get("https://players-app-4ibl.onrender.com/player")
   }
 
   deletePlayerByID(id: string): Observable<Player>{
@@ -24,12 +24,12 @@ export class PlayerService {
   }
 
   createPlayer(player: Partial<Player>): Observable<Player> {
-    return this.http.post<Player>('http://localhost:3000/player', player);
+    return this.http.post<Player>('https://players-app-4ibl.onrender.com/player', player);
   }
 
 
   getPlayerById(player: Partial<Player>): Observable<Player> {
-    return this.http.post<Player>('http://localhost:3000/player', player);
+    return this.http.post<Player>('https://players-app-4ibl.onrender.com/player', player);
   }
 
 
